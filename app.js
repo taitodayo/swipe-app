@@ -68,14 +68,19 @@ function swipeCard(direction) {
     updateQuizStatus(direction === 'right');
 
     setTimeout(() => {
-        card.style.transition = 'opacity 0.5s ease,transform 0.5s ease';
-        card.style.opacity = '1'
-        card.style.transform = 'none';
+        card.style.transition = 'none';
+        card.style.transform = 'scale(0.9)';
         card.classList.remove('flipped');
         console.log('判定結果: ' + resultText);
         
         // 次の復習問題を表示
         showNextQuiz();
+
+        setTimeout (() => {
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'none'
+        },50);
 
     }, 400);
 }

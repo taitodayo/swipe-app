@@ -7,7 +7,7 @@ card.addEventListener('click',() => {
 });
 
 let startX = 0;
-let currentx = 0;
+let currentX = 0;
 
 function handleStart(e) {
     isDragging = false;
@@ -16,7 +16,7 @@ function handleStart(e) {
 }
 
 function handleMove(e) {
-    if (StartX === 0) return;
+    if (StartX == 0) return;
 
     if (e.cancelable) {
         e.preventDefault();
@@ -86,7 +86,7 @@ function getClientX(e) {
 card.addEventListener('mousedown', handleStart, { passive: false });
 window.addEventListener('mousemove' ,handleMove, {passive: false });
 window.addEventListener('mouseup', handleEnd);
-window.addEventListener('touchcansel',handleEnd)
+window.addEventListener('touchcancel',handleEnd)
 
 card.addEventListener('touchstart',handleStart);
 window.addEventListener('touchmove',handleMove);

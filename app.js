@@ -75,7 +75,7 @@ function swipeCard(direction) {
         // 次の復習問題を表示
         showNextQuiz();
 
-    }, 400);
+    }, 100);
 }
 
 function resetCardPosition() {

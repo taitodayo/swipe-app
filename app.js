@@ -17,14 +17,19 @@ function handleStart(e) {
 
 function handleMove(e) {
     if (StartX === 0) return;
+
+    if (e.cancelable) {
+        e.preventDefault();
+    }
+
     currentX = getClientX(e) - startX;
 
-    if (Math,abs(currentX) > 5) {
+    if (Math.abs(currentX) > 5) {
         isDragging = true;
     }
 
     const rotateDeg = currentX * 0.05;
-    card.style.transform = 'translateX(${currentX}px) rotate(${rotateDeg}deg)';
+    card.style.transform = 'translateX(' + currentX + 'px) rotate(' + rotateDeg + 'deg)';
 }
 
 function handleEnd() {
@@ -78,9 +83,10 @@ function getClientX(e) {
     return e.touches ? e.touches[0].clientX : e.clientX;
 }
 
-card.addEventListener('mousedown',handleStart);
-window.addEventListener('mousemove',handleMove);
-window.addEventListener('mouseup',handleEnd);
+card.addEventListener('mousedown', handleStart, { passive: false });
+window.addEventListener('mousemove' ,handleMove, {passive: false });
+window.addEventListener('mouseup', handleEnd);
+window.addEventListener('touchcansel',handleEnd)
 
 card.addEventListener('touchstart',handleStart);
 window.addEventListener('touchmove',handleMove);

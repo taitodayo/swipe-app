@@ -82,7 +82,7 @@ function swipeCard(direction) {
             card.style.transform = 'none'
         },50);
 
-    }, 1200);
+    }, 400);
 }
 
 function resetCardPosition() {

@@ -57,7 +57,7 @@ header {
     margin-bottom: 20px;
 }
 
-#inport-btn {
+.inport-btn {
     padding: 8px 16px;
     background-color: #888;
     color: var(--main-text);
@@ -139,4 +139,8 @@ footer {
     color: #666;
     font-weight: bold;
     padding: 10px 0;
+}
+
+#quesiton-text {
+    color: var(--main-text);
 }

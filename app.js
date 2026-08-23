@@ -62,12 +62,14 @@ function swipeCard(direction) {
 
     card.style.transition = 'transform 0.6s ease';
     card.style.transform = 'translateX(' + moveX + 'px) rotate(' + rotateDeg + 'deg)';
+    card.style.opacity = '0'
 
     // 正解・不正解に応じて復習時間をセット
     updateQuizStatus(direction === 'right');
 
     setTimeout(() => {
-        card.style.transition = 'none';
+        card.style.transition = 'opacity 0.5s ease,transform 0.5s ease';
+        card.style.opacity = '1'
         card.style.transform = 'none';
         card.classList.remove('flipped');
         console.log('判定結果: ' + resultText);

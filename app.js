@@ -60,7 +60,7 @@ function swipeCard(direction) {
         resultText = '分かった';
     }
 
-    card.style.transition = 'transform 0.8s cubic-bezier(0.6,-0.28,0.735,0.045) ease-in';
+    card.style.transition = 'transform 1.2s cubic-bezier(0.16,1,0.3,1) ease-out';
     card.style.transform = 'translateX(' + moveX + 'px) rotate(' + rotateDeg + 'deg)';
     card.style.opacity = '0'
 
@@ -82,7 +82,7 @@ function swipeCard(direction) {
             card.style.transform = 'none'
         },50);
 
-    }, 400);
+    }, 1200);
 }
 
 function resetCardPosition() {

@@ -60,7 +60,7 @@ function swipeCard(direction) {
         resultText = '分かった';
     }
 
-    card.style.transition = 'transform 0.4s cubic-bezier(0.6,-0.28,0.735,0.045) ease-in';
+    card.style.transition = 'transform 0.8s cubic-bezier(0.6,-0.28,0.735,0.045) ease-in';
     card.style.transform = 'translateX(' + moveX + 'px) rotate(' + rotateDeg + 'deg)';
     card.style.opacity = '0'
 

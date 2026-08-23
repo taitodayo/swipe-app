@@ -29,7 +29,7 @@ function handleMove(e) {
     }
 
     const rotateDeg = currentX * 0.05;
-    card.style.transform = 'translateX(' + currentX + 'px);// rotate(' + rotateDeg + 'deg)'
+    card.style.transform = 'translateX(' + currentX + 'px) rotate(' + rotateDeg + 'deg)';
 }
 
 function handleEnd() {

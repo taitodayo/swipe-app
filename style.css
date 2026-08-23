@@ -9,6 +9,7 @@
     --main-bg: #FFFBF7;
     --card-color: #FFFFFF;
     --card-back-color: #fafafa;
+    --title-color: #000000;
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -16,6 +17,7 @@
         --main-bg: #000000;
         --card-front-color: #333333;
         --card-back-color: #222222;
+        --title-color: #666;
     }
 }
 
@@ -32,6 +34,9 @@ body {
     overscroll-behavior: none;
     -webkit-user-select: none;
     user-select: none;
+}
+.title {
+    color: var(--title-color);
 }
 
 .container {
@@ -52,7 +57,7 @@ header {
 
 #inport-btn {
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #888;
     color: var(--main-text);
     border:none;
     border-radius: 4px;
@@ -73,7 +78,7 @@ header {
     position: relative;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    background: white;
+    background: var(--card-color);
     user-select: none;
     touch-action: none;
 }

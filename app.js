@@ -29,7 +29,7 @@ function handleMove(e) {
     }
 
     const rotateDeg = currentX * 0.05;
-    card.style.transform = 'translateX(' + currentX + 'px) rotate(' + rotateDeg + 'deg)';
+    card.style.transform = 'translateX(' + currentX + 'px);// rotate(' + rotateDeg + 'deg)'
 }
 
 function handleEnd() {
@@ -75,7 +75,7 @@ function swipeCard(direction) {
         // 次の復習問題を表示
         showNextQuiz();
 
-    }, 100);
+    }, 400);
 }
 
 function resetCardPosition() {

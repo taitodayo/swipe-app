@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = ja>
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width,initial-scale = 1.0">
+    <title>newmonicのパクリ</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div class = "container">
+
+        <header>
+            <h1>暗記カード</h1>
+            <input type = "file" id = "csv-input" accept = ".csv" style = "display: none;">
+            <botton id = "import-btn">ＣＳＶ読み込み</botton>
+        </header>
+
+        <main class = "card-container">
+            <div class = "card" id = "card">
+                <div class = "card-inner">
+                    <div class = "card-front">
+                        <p class = "level">問題</p>
+                        <div class = "content" id = "question-text">ここに問題が表示されます</div>
+                    </div>
+                    <div class = "card-back">
+                        <p class = "level">解答·解説</p>
+                        <div class = "content" id = "answer-text">ここに解答と解説が表示されます</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <span>← 分からなかった</span>
+            <span>分かった →</span>
+        </footer>
+    </div>
+
+    <script src = "app.js"></script>
+</body>
+</html>

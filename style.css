@@ -35,6 +35,8 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
+
+
 .title {
     color: var(--title-color);
 }

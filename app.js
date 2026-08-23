@@ -234,3 +234,20 @@ function loadData() {
         quizList = JSON.parse(saved);
     }
 }
+
+const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark");
+const darkModeOn = e.matches;
+
+darkModeMediaQuery.addListener((e) => {
+
+    const darkModeOn = e.matches;
+    if (darkModeOn) {
+
+        document.body.classList.remove("light-theme");
+        document.body.classList.add("dark-theme");
+    } else {
+
+        document.body.classList.remove("dark-theme");
+        document.body.classList.add("light-theme");
+    }
+});

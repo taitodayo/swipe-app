@@ -60,7 +60,7 @@ function swipeCard(direction) {
         resultText = '分かった';
     }
 
-    card.style.transition = 'transform 0.4s ease';
+    card.style.transition = 'transform 0.6s ease';
     card.style.transform = 'translateX(' + moveX + 'px) rotate(' + rotateDeg + 'deg)';
 
     // 正解・不正解に応じて復習時間をセット

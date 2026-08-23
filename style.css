@@ -7,7 +7,7 @@
 :root {
     --main-text: #000000;
     --main-bg: #FFFBF7;
-    --card-color: #FFFFFF;
+    --card-front-color: #FFFFFF;
     --card-back-color: #fafafa;
     --title-color: #000000;
 }
@@ -106,6 +106,10 @@ header {
     padding: 24px;
     display: flex;
     flex-direction: column;
+}
+
+.card-front {
+    background-color: var(--card-front-color);
 }
 
 .card-back {

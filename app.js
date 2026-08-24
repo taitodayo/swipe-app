@@ -112,6 +112,7 @@ const importBtn = document.getElementById('import-btn');
 const csvInput = document.getElementById('csv-input');
 const questionText = document.getElementById('question-text');
 const answerText = document.getElementById('answer-text');
+const phase_badge = DocumentFragment.getElementById('faze');
 
 let quizList = [];
 let currentQuiz = null; // 現在出題中の問題データ
@@ -222,6 +223,8 @@ function showNextQuiz() {
     currentQuiz = availableQuizzes[randomIndex];
 
     questionText.innerText = currentQuiz.question;
+    phase_badge.innerText = 'フェーズ' + currentQuiz.phase;
+
 
     let backText = currentQuiz.answer;
     if (currentQuiz.explanation) {

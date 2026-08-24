@@ -77,7 +77,7 @@ function swipeCard(direction) {
         card.style.opacity = '0';
 
         setTimeout (() => {
-            card.style.transition = 'opacity 0.8s ease, transform 0.5s ease';
+            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
             card.style.opacity = '1';
             card.style.transform = 'none'
         },50);

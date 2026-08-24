@@ -62,7 +62,6 @@ function swipeCard(direction) {
 
     card.style.transition = 'transform 1.2s ease';
     card.style.transform = 'translateX(' + moveX + 'px) rotate(' + rotateDeg + 'deg)';
-    card.style.opacity = '0'
 
     // 正解・不正解に応じて復習時間をセット
     updateQuizStatus(direction === 'right');
@@ -75,6 +74,7 @@ function swipeCard(direction) {
         
         // 次の復習問題を表示
         showNextQuiz();
+        card.style.opacity = '0';
 
         setTimeout (() => {
             card.style.transition = 'opacity 0.8s ease, transform 0.5s ease';
@@ -82,7 +82,7 @@ function swipeCard(direction) {
             card.style.transform = 'none'
         },50);
 
-    }, 400);
+    }, 600);
 }
 
 function resetCardPosition() {
